@@ -1,0 +1,13 @@
+SinglyLinkedListNode* insertNodeAtHead(SinglyLinkedListNode* llist, int data) {
+SinglyLinkedListNode* ptr;
+ptr= (SinglyLinkedListNode*)malloc(sizeof(SinglyLinkedListNode*));
+ptr->data= data;
+if(llist==NULL){
+  ptr->next=NULL;
+ }
+else{
+    ptr->next=llist;
+ }
+ llist=ptr;
+ return llist;
+}
