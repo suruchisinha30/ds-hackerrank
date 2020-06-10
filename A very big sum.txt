@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+long int sum=0,i,size,array[1000];
+    scanf("%ld",&size);
+    for(i=0;i<size;i++)
+    {
+    scanf("%ld",&array[i]);
+    }
+    for(i=0;i<size;i++)
+    {
+        sum+=array[i];
+    }
+    printf("%ld",sum);
+    
+    return 0;
+}
