@@ -1,0 +1,20 @@
+SinglyLinkedListNode* insertNodeAtTail(SinglyLinkedListNode *head,int data) {
+    if(head==NULL) { 
+      SinglyLinkedListNode *newn=(SinglyLinkedListNode *)malloc(sizeof(SinglyLinkedListNode));
+
+        newn->next=NULL;
+        newn->data=data;
+        head=newn;
+
+    }
+    else{
+     SinglyLinkedListNode *newn2=(SinglyLinkedListNode *)malloc(sizeof(SinglyLinkedListNode));
+    newn2=head;
+    while(newn2->next!=NULL){
+        newn2=newn2->next;
+    }
+    newn2->next=insertNodeAtTail(newn2->next , data);
+
+}
+return head;
+}
