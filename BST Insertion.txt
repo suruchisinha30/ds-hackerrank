@@ -1,0 +1,14 @@
+Node * insert(Node * root, int data) {
+        if (!root)  return new Node(data);
+        Node* base=root, *prev;
+        while(base)
+        {
+            prev=base;
+            if (data<base->data)
+                base=base->left;
+            else base=base->right;
+        }
+        if (prev->data<data)    prev->right = new Node(data);
+        else prev->left = new Node(data);
+        return root;
+    }
